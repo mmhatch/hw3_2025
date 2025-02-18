@@ -13,14 +13,13 @@ a:focus {
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 div.skip>a{
-     position:relative;
+     position:absolute;
      top:-40px;
-
 }
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 div.skip>a:focus{
-     position:relative;
+     position:absolute;
      top:20px;
 }
 
@@ -41,9 +40,9 @@ div.skip>a:focus{
 first div in the grid  and place it in the grid. */
 
 main.container > div:first-child{
+     background-image: url("images/header.jpg");
      grid-column-start: 1;
      grid-column-end: -1;
-     background-image: url("images/header.jpg");
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
@@ -98,7 +97,29 @@ main.container > div:first-child{
  }
 
 /* Add your media query here */
-
+@media only screen and (min-width: 800px){
+     nav{
+          text-align: right;
+          padding: 30px 0px;
+     }
+     .container{
+          display: grid;
+          grid-template-columns: 50px auto 500px auto 50px;
+          gap: 15px; 
+     }
+     .about, .clients, .method-image, .contact-image{
+          grid-column-start: 3;
+          grid-column-end: 5;
+     }
+     .method, .contact, .about-image, .clients-image{
+          grid-column-start: 2;
+          grid-column-end: 4;
+     }
+     .text-block{
+          max-height: 250px;
+          overflow: auto;
+     }
+}
 
   /* Step 9: Write the selector/rule property to style the nav element */
 
