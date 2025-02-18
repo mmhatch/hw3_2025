@@ -1,0 +1,135 @@
+/*Your Code Here*/
+/* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
+
+/* Step 1: Write selector/rule property to add an underline when
+links in the navigation are in the hover or focus state.*/
+a:hover {
+     text-decoration: underline;
+}
+a:focus {
+     text-decoration: underline;
+}
+
+
+/* Step 2a: Write selector/rule property to position the default position for the skip class element*/
+div.skip>a{
+     position:absolute;
+     top:-40px;
+}
+
+/* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+div.skip>a:focus{
+     position:absolute;
+     top:20px;
+}
+
+/* Step 3: Write selector/rule property to style all elements when in focus*/
+:focus{
+     border: 2px solid;
+}
+
+
+/* Step 4: Write selector/rule property to style the container */
+.container {
+     display: grid;
+     grid-template-columns: 1fr 5fr 1fr;
+     gap: 15px;
+}
+
+/* Step 5: Write selector/rule property to add the background image to the 
+first div in the grid  and place it in the grid. */
+
+main.container > div:first-child{
+     background-image: url("../images/header.jpg");
+     grid-column-start: 1;
+     grid-column-end: -1;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+}
+
+/* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
+ four rows in the grid. */
+ .about, .method, .clients, .contact {
+     grid-column-start: 2;
+     grid-column-end: 3;
+}
+.about{
+     grid-row-start: 2;
+}
+.method{
+     grid-row-start: 3;
+}
+.clients{
+     grid-row-start: 4;
+}
+.contact{
+     grid-row-start: 5;
+}
+.about-image, .method-image, .clients-image, .contact-image {
+     grid-column-start: 1;
+     grid-column-end: -1;
+     max-height: 600px;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     max-width: 100%;
+     overflow: hidden;
+}
+.about-image{
+     grid-row-start: 2;
+}
+.method-image{
+     grid-row-start: 3;
+}
+.clients-image{
+     grid-row-start: 4;
+}
+.contact-image{
+     grid-row-start: 5;
+}
+      /*This will be a lot of rules.... but be strategic and combine seletors*/
+
+
+ /* Step 8: Write the selector/rule property to style the .text-block class. */
+ .text-block{
+     margin:auto;
+ }
+
+/* Add your media query here */
+@media only screen and (min-width: 800px){
+     nav{
+          text-align: right;
+          padding: 30px 0px;
+     }
+     .container{
+          display: grid;
+          grid-template-columns: 50px auto 500px auto 50px;
+          gap: 15px; 
+     }
+     .about, .clients, .method-image, .contact-image{
+          grid-column-start: 3;
+          grid-column-end: 5;
+     }
+     .method, .contact, .about-image, .clients-image{
+          grid-column-start: 2;
+          grid-column-end: 4;
+     }
+     .text-block{
+          max-height: 250px;
+          overflow: auto;
+     }
+}
+
+  /* Step 9: Write the selector/rule property to style the nav element */
+
+ 
+  /* Step 10: Write the selector/rule property to update the .container class */
+
+
+  /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
+
+
+
+ /* Step 13:Write the selector/rule property to update the .text-block class */
+
